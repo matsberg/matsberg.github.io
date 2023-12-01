@@ -1,0 +1,114 @@
+:root {
+  --yellowish:rgb(170,165,153);
+  --redish:rgb(118,61,52);
+  --greenish:rgb(53,92,66);
+  --blueish:rgb(63,108,222);
+  --whiteish:rgb(225,213,203);
+  --lightgreyish:rgb(104,98,96);
+  --greyish:rgb(90,83,81);
+  --darkgreyish:rgb(34,31,26);
+  --blackish:rgb(16,11,6);
+
+  --vspace:1rem;
+  --hspace:.5rem;;
+}
+* {
+  margin: 0;
+  padding: 0;
+  }
+  html{
+    font-family: Verdana, sans-serif;
+    font-size:10pt;
+  }
+  body {
+      background-color: var(--whiteish);
+      color: var(--redish);
+    }
+    header {
+      width:100%;
+      padding-top:var(--vspace);
+      padding-bottom: var(--vspace);
+      background-color: var(--blueish);
+      color: var(--blackish);
+      text-align: center;
+    }
+    section {
+      display: flex;
+      flex-direction:row;
+      align-items: stretch;
+      margin-bottom:var(--vspace);
+      padding-bottom:var(--vspace);
+    }
+    @media (max-width: 600px) {
+      section {
+        flex-direction: column;
+      }
+    }
+      nav {
+        flex-grow:0;
+        margin:0;
+        
+      }
+        nav ul {
+          display: flex;
+          flex-direction:column;
+          list-style-type: none;
+        }
+        @media (max-width: 600px) {
+          nav ul {
+            flex-direction: row;
+          }
+        }
+          nav ul li {
+            background-color: var(--greenish);
+            padding: var(--vspace);
+            border-style:solid;
+            border-color:var(--whiteish);
+            border-top-width: var(--vspace);
+            border-right-width: var(--hspace);
+          }
+      article {
+        flex-grow:8;
+        overflow-y:auto;
+        padding-left:var(--vspace);
+        padding-right:var(--vspace);
+        padding-top:var(--vspace);
+        padding-bottom:var(--vspace);
+        margin-bottom:var(--vspace);
+      }
+    footer{
+      position:fixed;
+      bottom:0;
+      right:0;
+      left:0;
+      width:100%;
+      padding-top:var(--vspace);
+      padding-bottom:var(--vspace);
+      padding-left:var(--hspace);
+      background-color: var(--redish);
+      color: var(--yellowish);
+    }
+    a {   
+      color: var(--whiteish);
+        text-decoration: none;
+    }
+    a:link {   
+      color: var(--whiteish);
+        text-decoration: none;
+    }
+    a:visited {   
+      color: var(--yellowish);
+        text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+      text-decoration-style: dotted;
+    }
+    a:focus{
+      text-decoration: underline;
+    }
+    a:active {
+      text-decoration: underline;
+      text-decoration-style: solid;
+    }
+
